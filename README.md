@@ -7,7 +7,7 @@ Input: 28 * 28 * 1
 Output: 24 * 24 * 6
 Kernel size: 5 * 5
 Kernel amount: 6
-Stride: 1 * 1
+Stride: 1
 
 - Sigmoid
 
@@ -16,7 +16,7 @@ Stride: 1 * 1
 Input: 24 * 24 * 6
 Output: 12 * 12 * 6
 Kernel size: 2 * 2
-Stride: 2 * 2
+Stride: 2
 
 - FullyConnected1
 
