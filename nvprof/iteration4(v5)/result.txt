@@ -1,0 +1,92 @@
+====== aininot260 gh@ysucloud.com ======
+         Processor used : GPU
+         Learning rate  : 0.20
+         Epochs         : 20
+         Batch size     : 16
+========================================
+
+Training labels : Already read 60000 labels
+Training images : Already read 60000 images
+Testing labels : Already read 10000 labels
+Testing images : Already read 10000 images
+
+Using device 0: GeForce GTX 950M
+Training  Time spent : 11s Image count : 60000 Accuracy : 28.4517% Error : 30.1869% Epoch : 1 
+Testing   Time spent : 12s Image count : 10000 Accuracy : 72.6600% Error : 19.4339% 
+The new model has been exported. Accuracy has reached to 72.66000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 81.4667% Error : 12.9737% Epoch : 2 
+Testing   Time spent : 10s Image count : 10000 Accuracy : 84.1800% Error : 9.2332% 
+The new model has been exported. Accuracy has reached to 84.18000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 89.5333% Error : 7.3872% Epoch : 3 
+Testing   Time spent : 11s Image count : 10000 Accuracy : 89.1400% Error : 6.1036% 
+The new model has been exported. Accuracy has reached to 89.14000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 91.4517% Error : 5.7840% Epoch : 4 
+Testing   Time spent : 11s Image count : 10000 Accuracy : 91.1800% Error : 4.8827% 
+The new model has been exported. Accuracy has reached to 91.18000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 92.5500% Error : 4.9301% Epoch : 5 
+Testing   Time spent : 10s Image count : 10000 Accuracy : 92.2800% Error : 4.3486% 
+The new model has been exported. Accuracy has reached to 92.28000%
+
+Training  Time spent : 11s Image count : 60000 Accuracy : 93.3500% Error : 4.3480% Epoch : 6 
+Testing   Time spent : 11s Image count : 10000 Accuracy : 93.3900% Error : 3.7430% 
+The new model has been exported. Accuracy has reached to 93.39000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 94.0117% Error : 3.8714% Epoch : 7 
+Testing   Time spent : 11s Image count : 10000 Accuracy : 94.3100% Error : 3.3425% 
+The new model has been exported. Accuracy has reached to 94.31000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 94.5583% Error : 3.6562% Epoch : 8 
+Testing   Time spent : 11s Image count : 10000 Accuracy : 94.7600% Error : 3.2363% 
+The new model has been exported. Accuracy has reached to 94.76000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 94.9717% Error : 3.3770% Epoch : 9 
+Testing   Time spent : 10s Image count : 10000 Accuracy : 95.1700% Error : 2.8653% 
+The new model has been exported. Accuracy has reached to 95.17000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 95.3450% Error : 3.0983% Epoch : 10 
+Testing   Time spent : 10s Image count : 10000 Accuracy : 95.5400% Error : 2.7187% 
+The new model has been exported. Accuracy has reached to 95.54000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 95.6767% Error : 2.8985% Epoch : 11 
+Testing   Time spent : 10s Image count : 10000 Accuracy : 95.9000% Error : 2.4149% 
+The new model has been exported. Accuracy has reached to 95.90000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 96.0183% Error : 2.7011% Epoch : 12 
+Testing   Time spent : 11s Image count : 10000 Accuracy : 96.0500% Error : 2.3762% 
+The new model has been exported. Accuracy has reached to 96.05000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 96.2700% Error : 2.5148% Epoch : 13 
+Testing   Time spent : 11s Image count : 10000 Accuracy : 96.3000% Error : 2.1490% 
+The new model has been exported. Accuracy has reached to 96.30000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 96.4517% Error : 2.4373% Epoch : 14 
+Testing   Time spent : 10s Image count : 10000 Accuracy : 96.5000% Error : 2.1017% 
+The new model has been exported. Accuracy has reached to 96.50000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 96.6683% Error : 2.2770% Epoch : 15 
+Testing   Time spent : 10s Image count : 10000 Accuracy : 96.6300% Error : 1.9613% 
+The new model has been exported. Accuracy has reached to 96.63000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 96.8733% Error : 2.1985% Epoch : 16 
+Testing   Time spent : 10s Image count : 10000 Accuracy : 96.8700% Error : 1.9285% 
+The new model has been exported. Accuracy has reached to 96.87000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 97.0600% Error : 2.0850% Epoch : 17 
+Testing   Time spent : 10s Image count : 10000 Accuracy : 96.9200% Error : 1.7845% 
+The new model has been exported. Accuracy has reached to 96.92000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 97.1817% Error : 2.0117% Epoch : 18
+Testing   Time spent : 11s Image count : 10000 Accuracy : 97.1400% Error : 1.7812%
+The new model has been exported. Accuracy has reached to 97.14000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 97.2917% Error : 1.9056% Epoch : 19
+Testing   Time spent : 11s Image count : 10000 Accuracy : 97.2500% Error : 1.8389%
+The new model has been exported. Accuracy has reached to 97.25000%
+
+Training  Time spent : 10s Image count : 60000 Accuracy : 97.3817% Error : 1.8305% Epoch : 20
+Testing   Time spent : 10s Image count : 10000 Accuracy : 97.3100% Error : 1.6673%
+The new model has been exported. Accuracy has reached to 97.31000%

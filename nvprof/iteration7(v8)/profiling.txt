@@ -1,0 +1,37 @@
+==16512== Profiling application: ./mnist.exe GPU
+==16512== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   30.70%  446.575s   1400000  318.98us  65.697us  767.47us  fp_conv_pool(int, bool)
+                   28.44%  413.707s   1400000  295.51us  49.825us  989.07us  fp_fc_answer(int, bool)
+                   16.12%  234.459s    600000  390.77us  306.37us  833.01us  bp_assign_grads_fc(int, int)
+                   12.03%  175.033s   1200000  145.86us  44.320us  607.88us  bp_update_conv(int)
+                   11.84%  172.195s   1200000  143.50us  107.27us  248.80us  bp_update_fc(int)
+                    0.87%  12.5982s    600000  20.997us  3.3600us  175.46us  bp_assign_grads_conv(int, int)
+      API calls:   72.49%  106.718s   6400000  16.674us  3.9000us  784.20ms  cudaLaunchKernel
+                   27.24%  40.1054s        40  1.00264s  391.66ms  1.58693s  cudaDeviceSynchronize
+                    0.15%  226.51ms         1  226.51ms  226.51ms  226.51ms  cuDevicePrimaryCtxRetain
+                    0.11%  163.65ms         1  163.65ms  163.65ms  163.65ms  cuDevicePrimaryCtxRelease
+                    0.00%  1.2059ms         1  1.2059ms  1.2059ms  1.2059ms  cuModuleUnload
+                    0.00%  1.1518ms        16  71.987us  1.0000us  1.0339ms  cudaStreamCreateWithFlags
+                    0.00%  525.90us         1  525.90us  525.90us  525.90us  cudaGetDeviceProperties
+                    0.00%  309.80us        16  19.362us  13.900us  45.800us  cudaStreamDestroy
+                    0.00%  256.00us        97  2.6390us     100ns  122.00us  cuDeviceGetAttribute
+                    0.00%  141.80us         1  141.80us  141.80us  141.80us  cudaSetDevice
+                    0.00%  56.800us         1  56.800us  56.800us  56.800us  cuDeviceTotalMem
+                    0.00%  16.600us        26     638ns     400ns  3.2000us  cuModuleGetGlobal
+                    0.00%  9.9000us         1  9.9000us  9.9000us  9.9000us  cuDeviceGetPCIBusId
+                    0.00%  5.6000us         6     933ns     200ns  3.9000us  cuModuleGetFunction
+                    0.00%  4.0000us         3  1.3330us     200ns  3.5000us  cuDeviceGetCount
+                    0.00%  3.0000us         1  3.0000us  3.0000us  3.0000us  cuCtxSetCurrent
+                    0.00%  1.4000us         1  1.4000us  1.4000us  1.4000us  cuDeviceGetName
+                    0.00%  1.2000us         2     600ns     100ns  1.1000us  cuDeviceGet
+                    0.00%     900ns         2     450ns     400ns     500ns  cuCtxGetCurrent
+                    0.00%     400ns         1     400ns     400ns     400ns  cuDeviceGetUuid
+                    0.00%     400ns         1     400ns     400ns     400ns  cuCtxGetDevice
+                    0.00%     300ns         1     300ns     300ns     300ns  cuDeviceGetLuid
+
+==16512== Unified Memory profiling result:
+Device "GeForce GTX 950M (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+   53792  4.0000KB  4.0000KB  4.0000KB  210.1250MB  375.5745ms  Host To Device
+     474  459.49KB  4.0000KB  1.0000MB  212.6953MB   1.248726s  Device To Host

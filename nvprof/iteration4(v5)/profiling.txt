@@ -1,0 +1,56 @@
+
+==10032== Profiling application: mnist.exe GPU
+==10032== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   35.75%  221.613s   1400000  158.29us  22.561us  394.98us  _pool_fc1(int)
+                   16.03%  99.3588s   1200000  82.798us  30.496us  555.91us  _update_conv_w(int)
+                   13.59%  84.2223s   1400000  60.158us  36.225us  218.50us  _input_conv(int)
+                    8.06%  49.9886s   7200000  6.9420us  1.8880us  199.17us  _update_fc1_w(int, int)
+                    5.93%  36.7456s   1200000  30.621us  9.7280us  213.35us  _update_conv_delta(int)
+                    5.72%  35.4773s    450000  78.838us  41.249us  511.62us  assign_fc1_w(int, int)
+                    2.92%  18.1289s   1400000  12.949us  2.1120us  163.33us  _fc1_fc2(int)
+                    2.78%  17.2522s   1400000  12.322us  4.8640us  306.47us  _check_answer_get_error(int)
+                    1.99%  12.3505s   1200000  10.292us  2.2080us  131.43us  _update_conv_b(int)
+                    1.40%  8.68722s   1400000  6.2050us  1.7600us  218.76us  _conv_pool(int)
+                    1.09%  6.74940s   1200000  5.6240us  1.5040us  188.96us  _update_fc1_b(int)
+                    0.83%  5.17453s   1200000  4.3120us  1.3760us  145.54us  _update_fc2_b(int)
+                    0.77%  4.76678s   1200000  3.9720us  1.2480us  85.953us  _update_fc2_w(int)
+                    0.62%  3.83213s   1200000  3.1930us  1.5360us  74.850us  _set_input_train(int)
+                    0.60%  3.69949s   1200000  3.0820us  1.1520us  119.17us  _set_answer_train(int)
+                    0.37%  2.30858s     75000  30.781us  23.169us  201.76us  assign_fc2_w(int)
+                    0.36%  2.26213s     75000  30.161us  17.889us  215.08us  assign_conv_w(int)
+                    0.33%  2.06695s    200000  10.334us  1.2800us  119.04us  _set_input_test(int)
+                    0.26%  1.58725s     75000  21.163us  11.392us  344.55us  assign_fc1_b(int)
+                    0.23%  1.42583s     75000  19.011us  9.1520us  191.52us  assign_conv_b(int)
+                    0.19%  1.16311s    200000  5.8150us  1.1200us  110.08us  _set_answer_test(int)
+                    0.16%  1.01873s     75000  13.583us  10.145us  336.04us  assign_fc2_b(int)
+                    0.00%  1.4720us         1  1.4720us  1.4720us  1.4720us  [CUDA memcpy HtoD]
+      API calls:   99.17%  612.356s  25025000  24.469us  4.4000us  928.42ms  cudaLaunchKernel
+                    0.68%  4.21531s        40  105.38ms  2.0603ms  264.60ms  cudaDeviceSynchronize
+                    0.10%  603.97ms         1  603.97ms  603.97ms  603.97ms  cuDevicePrimaryCtxRelease
+                    0.05%  281.22ms         1  281.22ms  281.22ms  281.22ms  cuDevicePrimaryCtxRetain
+                    0.00%  15.811ms        16  988.19us  8.6000us  15.669ms  cudaStreamDestroy
+                    0.00%  5.4300ms         1  5.4300ms  5.4300ms  5.4300ms  cuModuleUnload
+                    0.00%  971.50us        16  60.718us     900ns  893.20us  cudaStreamCreateWithFlags
+                    0.00%  435.30us        97  4.4870us     200ns  203.60us  cuDeviceGetAttribute
+                    0.00%  339.30us         1  339.30us  339.30us  339.30us  cudaGetDeviceProperties
+                    0.00%  81.500us         1  81.500us  81.500us  81.500us  cudaSetDevice
+                    0.00%  73.900us         1  73.900us  73.900us  73.900us  cudaMemcpyToSymbol
+                    0.00%  48.600us         1  48.600us  48.600us  48.600us  cuDeviceTotalMem
+                    0.00%  30.500us        22  1.3860us     400ns  14.400us  cuModuleGetFunction
+                    0.00%  28.400us        36     788ns     500ns  3.7000us  cuModuleGetGlobal
+                    0.00%  17.500us         1  17.500us  17.500us  17.500us  cuCtxSetCurrent
+                    0.00%  16.400us         1  16.400us  16.400us  16.400us  cuDeviceGetPCIBusId
+                    0.00%  4.1000us         3  1.3660us     300ns  3.2000us  cuDeviceGetCount
+                    0.00%  3.2000us         2  1.6000us     600ns  2.6000us  cuDeviceGet
+                    0.00%  1.5000us         1  1.5000us  1.5000us  1.5000us  cuDeviceGetName
+                    0.00%     900ns         2     450ns     300ns     600ns  cuCtxGetCurrent
+                    0.00%     400ns         1     400ns     400ns     400ns  cuDeviceGetUuid
+                    0.00%     400ns         1     400ns     400ns     400ns  cuDeviceGetLuid
+                    0.00%     400ns         1     400ns     400ns     400ns  cuCtxGetDevice
+
+==10032== Unified Memory profiling result:
+Device "GeForce GTX 950M (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+   53788  4.0000KB  4.0000KB  4.0000KB  210.1094MB  428.3960ms  Host To Device
+     531  411.75KB  4.0000KB  1.0000MB  213.5156MB   1.252369s  Device To Host
