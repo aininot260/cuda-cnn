@@ -15,7 +15,7 @@ Stride: 1
 
 Input: 24 * 24 * 6
 Output: 12 * 12 * 6
-Kernel size: 2 * 2
+Window size: 2 * 2
 Stride: 2
 
 - FullyConnected1
