@@ -15,27 +15,18 @@ std::map<std::string, Weights> loadWeights(const std::string file)
 {
     std::cout << "Loading weights: " << file << std::endl;
     std::map<std::string, Weights> weightMap;
-
-    // Open weights file
     std::ifstream input(file);
     assert(input.is_open() && "Unable to load weight file.");
-
-    // Read number of weight blobs
     int32_t count;
     input >> count;
     assert(count > 0 && "Invalid weight map file.");
-
     while (count--)
     {
         Weights wt{nvinfer1::DataType::kFLOAT, nullptr, 0};
         uint32_t type, size;
-
-        // Read name and type of blob
         std::string name;
         input >> name >> std::dec >> type >> size;
         wt.type = static_cast<nvinfer1::DataType>(type);
-
-        // Load blob
         if (wt.type == nvinfer1::DataType::kFLOAT)
         {
             uint32_t* val = reinterpret_cast<uint32_t*>(malloc(sizeof(val) * size));
@@ -54,11 +45,9 @@ std::map<std::string, Weights> loadWeights(const std::string file)
             }
             wt.values = val;
         }
-
         wt.count = size;
         weightMap[name] = wt;
     }
-
     return weightMap;
 }
 
@@ -131,7 +120,7 @@ void run_model()
 	{
 		if (img[i / 28][i % 28] != 0)
 			img[i / 28][i % 28] = 255;
-		data[i] = float(img[i / 28][i % 28]);
+		data[i] = float(img[i / 28][i % 28])/255;
 	}
 	for (int i = 0; i < 28; i++)
 	{
