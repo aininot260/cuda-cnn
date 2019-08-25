@@ -9,7 +9,7 @@ Kernel size: 5 * 5
 Kernel amount: 6
 Stride: 1
 
-- Sigmoid
+- Tanh
 
 - Pooling
 

@@ -64,8 +64,8 @@ ICudaEngine* createMNISTEngine(unsigned int maxBatchSize, IBuilder* builder, nvi
 	map<string, Weights> weightMap = loadWeights(locateFile("params.txt"));
 	IConvolutionLayer* conv1 = network->addConvolution(*data, 6, DimsHW{ 5, 5 }, weightMap["conv1filter"], weightMap["conv1bias"]);
 	conv1->setStride(DimsHW{ 1, 1 });
-	IActivationLayer* sigmoid1 = network->addActivation(*conv1->getOutput(0), ActivationType::kSIGMOID);
-	IPoolingLayer* pool1 = network->addPooling(*sigmoid1->getOutput(0), PoolingType::kMAX, DimsHW{ 2, 2 });
+	IActivationLayer* tanh1 = network->addActivation(*conv1->getOutput(0), ActivationType::kTANH);
+	IPoolingLayer* pool1 = network->addPooling(*tanh1->getOutput(0), PoolingType::kMAX, DimsHW{ 2, 2 });
 	pool1->setStride(DimsHW{ 2, 2 });
 	IFullyConnectedLayer* ip1 = network->addFullyConnected(*pool1->getOutput(0), 45, weightMap["ip1filter"], weightMap["ip1bias"]);
 	IActivationLayer* sigmoid2 = network->addActivation(*ip1->getOutput(0), ActivationType::kSIGMOID);
