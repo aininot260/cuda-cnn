@@ -1,5 +1,7 @@
 # cuda_cnn
 
+This is a convolutional neural network implemented using C and CUDA.The model is deployed on embedded devices.
+
 ## Layer configuration
 - Convolution
 
