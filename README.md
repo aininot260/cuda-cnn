@@ -53,7 +53,6 @@ Output: 10
 
 Do the following in a development environment.
 ```
-cd ./v9\(gpu\ latest\)
 make
 ./mnist CPU
 ./mnist GPU
